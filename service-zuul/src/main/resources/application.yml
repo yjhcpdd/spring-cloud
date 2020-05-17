@@ -1,11 +1,8 @@
 server:
-  #服务端口号
-  port: 8091
-
+  port: 9100
 spring:
   application:
-    #服务名称（服务之间通过名称通信）
-    name: server-object-a
+    name: service-zuul
 
 eureka:
   client:
@@ -21,3 +18,12 @@ eureka:
     prefer-ip-address: true
     # 注册中心列表中显示的状态参数
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
+zuul:
+  routes:
+    # 三种路由配置
+    server-object-a:
+      path: /server-object-a/**
+      serviceId: server-object-a
+    server-object-b: /server-object-b/**
+    server-object-c:
+    

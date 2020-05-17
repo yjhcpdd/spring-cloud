@@ -1,6 +1,6 @@
 server:
   #服务端口号
-  port: 8081
+  port: 9001
 
 spring:
   application:
@@ -26,3 +26,10 @@ ribbon:
   ConnectTimeout: 10000
   #请求处理的超时时间
   ReadTimeout: 10000
+
+feign:
+  hystrix:
+    #开启hystrix
+    enabled: true
+    
+    

@@ -1,16 +1,15 @@
-package com.sa.test.servicea;
+package com.sa.test.servicec;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 
 @SpringBootApplication
 @EnableEurekaClient
-public class ServiceAApplication {
+public class ServiceCApplication {
     
     public static void main(String[] args) {
-        SpringApplication.run(ServiceAApplication.class, args);
+        SpringApplication.run(ServiceCApplication.class, args);
     }
     
 }
