@@ -1,0 +1,11 @@
+server:
+  port: 8080
+eureka:
+  client:
+    #eureka服务地址
+    service-url:
+      defaultZone: http://localhost:8081/eureka
+    #不将自己注册到注册中心
+    register-with-eureka: false
+    #不搜索注册服务
+    fetch-registry: false
